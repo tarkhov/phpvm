@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Check version
+version=$1
+if [ ! $version ]; then
+    echo "Version not provided."
+    exit
+fi
+
+# https://stackoverflow.com/questions/34139871/getting-php-version-for-currently-running-version
+current_version=$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")
+a2dismod php$current_version
+a2enmod php$version
+systemctl restart apache2
+sudo update-alternatives --set php /usr/bin/php$version

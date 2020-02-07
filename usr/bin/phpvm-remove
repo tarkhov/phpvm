@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Check version
+version=$1
+if [ ! $version ]; then
+    echo "Version not provided."
+    exit
+fi
+
+apt remove php$version
