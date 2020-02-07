@@ -1,0 +1,4 @@
+usr/bin/phpvm-install usr/bin
+usr/bin/phpvm-list usr/bin
+usr/bin/phpvm-remove usr/bin
+usr/bin/phpvm-use usr/bin

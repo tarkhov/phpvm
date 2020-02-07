@@ -1,0 +1,15 @@
+Source: phpvm
+Section: php
+Priority: optional
+Maintainer: Alexander Tarkhov <agtuks@gmail.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://github.com/tarkhov/phpvm
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/phpvm.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/phpvm.git
+
+Package: phpvm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: PHP version manager
+ Install, remove and switch between different php versions.
