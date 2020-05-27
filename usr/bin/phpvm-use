@@ -12,4 +12,4 @@ current_version=$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")
 a2dismod php$current_version
 a2enmod php$version
 systemctl restart apache2
-sudo update-alternatives --set php /usr/bin/php$version
+update-alternatives --set php /usr/bin/php$version

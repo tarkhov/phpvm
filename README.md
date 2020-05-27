@@ -41,19 +41,19 @@ sudo apt install phpvm
 ### Install version
 
 ```bash
-phpvm-install 5.6
+sudo phpvm-install 5.6
 ```
 
 ### Switch version
 
 ```bash
-phpvm-use 5.6
+sudo phpvm-use 5.6
 ```
 
 ### Remove version
 
 ```bash
-phpvm-remove 5.6
+sudo phpvm-remove 5.6
 ```
 
 ### Show versions
