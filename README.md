@@ -1,1 +1,1 @@
-# phpvm
+# PHP version manager
