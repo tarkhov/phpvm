@@ -1,0 +1,27 @@
+#!/bin/sh
+
+version=$2
+if [ ! $version ]; then
+    echo "PHP version not provided."
+    exit
+fi
+version="php.$version"
+
+command=$1
+if [ ! $command ]; then
+    echo "Command not provided."
+    exit
+fi
+
+case $command in
+    install )
+        apt install $version
+        ;;
+    use )
+        a2enmod $version
+        update-alternatives --set php /usr/bin/$version
+        ;;
+    *)
+        echo "Wrong command."
+        ;;
+esac
